@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <bds />
-    <link rel="stylesheet" href="index.css" />
-    <script src="index.js" defer></script>
-    <title>BigDevSoon - Tic Tac Toe Project</title>
-  </head>
-  <body>
-    <!-- Place below is for your own exciting code -->
-    <p>Time to write some code! 👀</p>
-    <!-- Change the [ME] part to your own name/GitHub link -->
-    <div class="footer">
-      <a href="https://bigdevsoon.me" target="_blank" rel="noopener noreferrer"
-        >Project by BigDevSoon</a
-      >
-      |
-      <span>Built with ❤️ by [ME]</span>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+  <div class="welcome-screen" id="welcomeScreen">
+    <div class="logo"><img class="logo" src="assets/icons/logo.svg" alt="XO Logo"></div>
+    <h1>Tic Tac Toe</h1>
+    <p>Dive into the excitement now and experience the timeless joy of this classic game!</p>
+    <button id="newGameBtn">New game</button>
+  </div>
+
+  <div class="game-screen" id="gameScreen">
+    <div class="header">
+      <div class="turn-indicator">Turn: <span id="turnIndicator">X</span></div>
     </div>
-  </body>
+    <div class="board" id="board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+    <div id="gameStatus"></div>
+  </div>
+</div>
+<script type="text/javascript" src="node_modules/tictactoe/dist/tictactoe.min.js"></script>
+<script src="index.js"></script>
+<!-- <script src="CPU/simpleAi.js"></script> -->
+</body>
 </html>
